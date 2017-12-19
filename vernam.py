@@ -1,3 +1,6 @@
+from random import choice
+from string import ascii_letters
+
 def VernamCipherFunction(text, key):
     result = ""
     ptr = 0
@@ -9,7 +12,8 @@ def VernamCipherFunction(text, key):
     return result
 
 
-encryption_key = "dis_iz_my_encryption_key"
+encryption_key = ''.join(choice(ascii_letters) for i in range(12))
+print(encryption_key)
 
 while True:
     input_text = input("\nEnter Text To Encrypt:\t")
